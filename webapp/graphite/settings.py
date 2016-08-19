@@ -95,6 +95,8 @@ STORAGE_FINDERS = (
 MIDDLEWARE_CLASSES=''
 MAX_TAG_LENGTH = 50
 AUTO_REFRESH_INTERVAL = 60
+# Use the "packrat" cache for parsing Graphite expressions
+USE_GRAMMAR_PARSE_CACHE = True
 
 #Authentication settings
 USE_LDAP_AUTH = False

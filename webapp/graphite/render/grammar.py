@@ -5,7 +5,11 @@ from pyparsing import (
     __version__,
 )
 
-ParserElement.enablePackrat()
+from graphite import settings
+
+if settings.USE_GRAMMAR_PARSE_CACHE:
+    ParserElement.enablePackrat()
+
 grammar = Forward()
 
 expression = Forward()

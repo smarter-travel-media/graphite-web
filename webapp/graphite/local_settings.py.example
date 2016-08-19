@@ -49,6 +49,14 @@
 #DEFAULT_CACHE_DURATION = 60 # Cache images and data for 1 minute
 
 
+# Use the "packrat" cache for parsing Graphite expressions. This cache is used
+# to avoid repeatedly performing the same operations in the course of parsing a
+# Graphite expression during a request. However, it is reset after parsing each
+# expression and makes use of locking to ensure the cache is consistent. This
+# may actually slow down parsing in some cases. Therefore, there's an option
+# to turn it off. YMMV.
+#USE_GRAMMAR_PARSE_CACHE = True
+
 #####################################
 # Filesystem Paths #
 #####################################

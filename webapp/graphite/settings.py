@@ -86,6 +86,8 @@ ALLOW_ANONYMOUS_CLI = True
 LOG_METRIC_ACCESS = False
 LEGEND_MAX_ITEMS = 10
 RRD_CF = 'AVERAGE'
+# Use the "packrat" cache for parsing Graphite expressions
+USE_GRAMMAR_PARSE_CACHE = True
 
 #Authentication settings
 USE_LDAP_AUTH = False

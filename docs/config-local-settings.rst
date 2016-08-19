@@ -59,6 +59,11 @@ DEFAULT_CACHE_DURATION
   Default expiration of cached data and images.
 
 
+USE_GRAMMAR_PARSE_CACHE
+  `Default: True`
+
+  Use a cache for parsing Graphite expressions. This cache is used to avoid repeatedly performing the same operations in the course of parsing a Graphite expression during a request. However, it is reset after each parsing each expression and makes use of locking to ensure the cache is consistent. This may actually slow down parsing in some cases. Therefore, there's an option to turn it off.
+
 Filesystem Paths
 ----------------
 These settings configure the location of Graphite-web's additional configuration files, static content, and data. These need to be adjusted if Graphite-web is installed outside of the :ref:`default installation layout <default-installation-layout>`.
